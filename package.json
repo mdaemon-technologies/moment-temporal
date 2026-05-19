@@ -1,7 +1,7 @@
 {
   "name": "@mdaemon/moment-temporal",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drop-in moment replacement backed by the Temporal API, with graceful fallback to moment when Temporal is unavailable.",
   "main": "dist/moment-temporal.umd.js",
   "module": "dist/moment-temporal.mjs",
@@ -64,5 +64,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/moment-temporal.mjs",
+      "require": "./dist/moment-temporal.cjs",
+      "default": "./dist/moment-temporal.umd.js"
+    }
+  }
 }
